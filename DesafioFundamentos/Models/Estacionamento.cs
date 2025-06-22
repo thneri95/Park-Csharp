@@ -1,71 +1,71 @@
-namespace DesafioFundamentos.Models
+namespace ParkingSystem.Models
 {
-    public class Estacionamento
+    public class Parking
     {
-        private decimal precoInicial = 0;
-        private decimal precoPorHora = 0;
-        private List<string> veiculos = new List<string>();
+        private decimal initialPrice = 0;
+        private decimal pricePerHour = 0;
+        private List<string> vehicles = new List<string>();
 
-        public Estacionamento(decimal precoInicial, decimal precoPorHora)
+        public Parking(decimal initialPrice, decimal pricePerHour)
         {
-            this.precoInicial = precoInicial;
-            this.precoPorHora = precoPorHora;
+            this.initialPrice = initialPrice;
+            this.pricePerHour = pricePerHour;
         }
 
-        public void AdicionarVeiculo()
+        public void AddVehicle()
         {
-            Console.WriteLine("Digite a placa do veículo para estacionar:");
-            string placa = Console.ReadLine()?.ToUpper().Trim();
+            Console.WriteLine("Enter the license plate of the vehicle to park:");
+            string plate = Console.ReadLine()?.ToUpper().Trim();
 
-            if (!string.IsNullOrEmpty(placa))
+            if (!string.IsNullOrEmpty(plate))
             {
-                veiculos.Add(placa);
-                Console.WriteLine($"Veículo com placa {placa} foi estacionado com sucesso.");
+                vehicles.Add(plate);
+                Console.WriteLine($"Vehicle with plate {plate} has been successfully parked.");
             }
             else
             {
-                Console.WriteLine("Placa inválida. Tente novamente.");
+                Console.WriteLine("Invalid plate. Please try again.");
             }
         }
 
-        public void RemoverVeiculo()
+        public void RemoveVehicle()
         {
-            Console.WriteLine("Digite a placa do veículo para remover:");
-            string placa = Console.ReadLine()?.ToUpper().Trim();
+            Console.WriteLine("Enter the license plate of the vehicle to remove:");
+            string plate = Console.ReadLine()?.ToUpper().Trim();
 
-            if (veiculos.Any(x => x == placa))
+            if (vehicles.Any(x => x == plate))
             {
-                Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
-                if (int.TryParse(Console.ReadLine(), out int horas) && horas >= 0)
+                Console.WriteLine("Enter the number of hours the vehicle was parked:");
+                if (int.TryParse(Console.ReadLine(), out int hours) && hours >= 0)
                 {
-                    decimal valorTotal = precoInicial + (precoPorHora * horas);
-                    veiculos.Remove(placa);
-                    Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal}");
+                    decimal totalAmount = initialPrice + (pricePerHour * hours);
+                    vehicles.Remove(plate);
+                    Console.WriteLine($"The vehicle {plate} was removed and the total price is: ${totalAmount:F2}");
                 }
                 else
                 {
-                    Console.WriteLine("Entrada inválida para horas. Operação cancelada.");
+                    Console.WriteLine("Invalid input for hours. Operation cancelled.");
                 }
             }
             else
             {
-                Console.WriteLine("Desculpe, esse veículo não está estacionado aqui. Confira se digitou a placa corretamente.");
+                Console.WriteLine("Sorry, this vehicle is not parked here. Please check the license plate and try again.");
             }
         }
 
-        public void ListarVeiculos()
+        public void ListVehicles()
         {
-            if (veiculos.Any())
+            if (vehicles.Any())
             {
-                Console.WriteLine("Os veículos estacionados são:");
-                foreach (string placa in veiculos)
+                Console.WriteLine("Currently parked vehicles:");
+                foreach (string plate in vehicles)
                 {
-                    Console.WriteLine(placa);
+                    Console.WriteLine(plate);
                 }
             }
             else
             {
-                Console.WriteLine("Não há veículos estacionados.");
+                Console.WriteLine("There are no vehicles parked.");
             }
         }
     }
