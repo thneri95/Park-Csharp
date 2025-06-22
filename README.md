@@ -99,7 +99,7 @@ decimal totalAmount = initialPrice + (pricePerHour * hours);
 ### 📥 Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/parking-system-csharp.git
+git clone https://github.com/thneri95/Park-Csharp
 cd parking-system-csharp
 ```
 
