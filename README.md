@@ -1,56 +1,96 @@
-# 🚗 Sistema de Estacionamento em C#
+# 🚗 Parking Lot System in C#
 
-Este é um projeto simples de console desenvolvido em C# que simula o funcionamento básico de um estacionamento. O sistema permite **registrar**, **listar** e **remover veículos**, além de **calcular o valor a ser pago** com base no tempo de permanência.
-
----
-
-## 📌 Funcionalidades
-
-✅ Registrar entrada de veículos  
-✅ Listar todos os veículos estacionados  
-✅ Remover veículo com cálculo de valor total  
-✅ Validação de entradas e tratamento de erros  
-✅ Cálculo baseado em preço inicial + preço por hora
+A simple and educational console application developed in **C# with .NET**, simulating a basic parking lot system. It allows users to **register**, **list**, and **remove vehicles**, calculating parking fees based on time spent.
 
 ---
 
-## 💡 Lógica de Negócio
+## 📸 Demo
 
-O cálculo do valor total segue a seguinte fórmula:
+```bash
+Welcome to the parking lot system!
+Enter the initial parking price:
+> 5
+Now enter the hourly rate:
+> 2
 
-valorTotal = precoInicial + (precoPorHora * horas)
+Select an option:
+1 - Register vehicle
+2 - Remove vehicle
+3 - List vehicles
+4 - Exit
+📌 Features
+✅ Register vehicle entry
 
-## 🧠 Skills Praticadas
+✅ List all parked vehicles
 
-Durante o desenvolvimento, foi possível colocar em prática:
+✅ Remove vehicle and calculate total price
 
-- Programação Orientada a Objetos (POO)
-- Uso de listas genéricas (`List<string>`)
-- Leitura e escrita no console
-- Controle de fluxo com `if`, `foreach` e `TryParse`
-- Encapsulamento e boas práticas de codificação
-- Validação de dados de entrada do usuário
+✅ Validate user inputs and handle errors
 
-## 🛠️ Tecnologias Utilizadas
+✅ Price formula: initialPrice + (pricePerHour * hours)
 
-- [.NET SDK](https://dotnet.microsoft.com/) (C#)
-- IDE: Visual Studio / VS Code
-- Programação orientada a objetos
-- Sistema de console (CLI)
+💡 Business Logic
+csharp
+Copy
+Edit
+decimal totalAmount = initialPrice + (pricePerHour * hours);
+Includes user-friendly prompts, case-insensitive plate checks, and safe input parsing.
 
+🧠 Skills Practiced
+Concept	Applied? ✅
+Object-Oriented Programming (OOP)	✅
+Generic Lists (List<string>)	✅
+Console I/O	✅
+Control Flow (if, switch, foreach)	✅
+Exception & Input Handling	✅
+Encapsulation & Clean Code	✅
 
-## 🚀 Próximos Passos / Upgrades: 
+🛠️ Tech Stack
+💻 .NET SDK (C#)
 
-✅ Persistência de dados (salvar placas em arquivo)
+🧱 Object-Oriented Programming
 
-💻 Interface gráfica com WinForms
+🧪 Visual Studio / VS Code
 
-🧪 Testes automatizados com xUnit
+🖥️ Console Application (CLI)
 
-🧩 Aplicar princípios SOLID
+🚀 Roadmap & Upgrades
+Feature	Status
+Save data to file	✅ Done
+GUI using WinForms	🛠️ In progress
+Unit testing with xUnit	⏳ Planned
+Apply SOLID principles	⏳ Planned
+Database integration (SQLite/SQL Server)	⏳ Planned
 
-☁️ Integração com banco de dados (ex: SQLite, SQL Server)
+🧭 How to Run
+Clone the repository
 
-👨‍💻 Autor
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/parking-system-csharp.git
+cd parking-system-csharp
+Open the project in Visual Studio or VS Code
+
+Run the project
+
+Press F5 or use the terminal:
+
+bash
+Copy
+Edit
+dotnet run
+📂 Project Structure
+bash
+Copy
+Edit
+/ParkingSystem
+│
+├── Models/
+│   └── Parking.cs          # Core class with vehicle logic
+├── Program.cs              # Console interface
+├── README.md               # Project documentation
+└── .csproj                 # Project config
+🙋‍♂️ Author
 Tiago Neri
-Finance Specialist & Full Stack Developer
+💼 Finance Specialist & 💻 Full Stack Developer
