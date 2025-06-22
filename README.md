@@ -85,13 +85,12 @@ decimal totalAmount = initialPrice + (pricePerHour * hours);
 
 ## 🚀 Roadmap & Upgrades
 
-| Feature                                      | Status       |
-|---------------------------------------------|--------------|
-| Save data to file                           | ✅ Done       |
+| Feature                                     | Status         
+| Save data to file                           | 🛠️ In progres  |
 | GUI using **WinForms**                      | 🛠️ In progress |
-| Unit testing with **xUnit**                 | ⏳ Planned    |
-| Apply **SOLID principles**                  | ⏳ Planned    |
-| Database integration (**SQLite/SQL Server**) | ⏳ Planned    |
+| Unit testing with **xUnit**                 | ⏳ Planned     |
+| Apply **SOLID principles**                  | ⏳ Planned     |
+| Database integration (**SQLite/SQL Server**)| ⏳ Planned     |
 
 ---
 
@@ -137,7 +136,8 @@ dotnet run
 ## 🙋‍♂️ Author
 
 **Tiago Neri**  
-💼 Finance Specialist & 💻 Full Stack Developer  
+💼 Finance Specialist +
+💻 Full Stack Developer  
 
 🔗 [LinkedIn](https://www.linkedin.com/in/tiago-neri-cfa-if-50935814b/)  
 
