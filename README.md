@@ -1,10 +1,22 @@
 # 🚗 Parking Lot System in C#
 
-A simple and educational console application developed in **C# with .NET**, simulating a basic parking lot system. It allows users to **register**, **list**, and **remove vehicles**, calculating parking fees based on time spent.
+Welcome to the **Parking Lot System**, a fully interactive and educational **C#/.NET** console application simulating a real-world parking environment.
 
 ---
 
-## 📸 Demo
+## 🎯 Overview
+
+This project allows users to:
+
+- 🚙 Register vehicle entry
+- 📋 List all parked vehicles
+- ❌ Remove a vehicle and calculate its total cost
+- 🔍 Validate inputs and handle errors
+- 💵 Use a pricing formula based on initial fee and hourly rate
+
+---
+
+## 📸 Interactive Demo
 
 ```bash
 Welcome to the parking lot system!
@@ -18,79 +30,115 @@ Select an option:
 2 - Remove vehicle
 3 - List vehicles
 4 - Exit
-📌 Features
-✅ Register vehicle entry
+```
 
-✅ List all parked vehicles
+---
 
-✅ Remove vehicle and calculate total price
+## 📌 Features
 
-✅ Validate user inputs and handle errors
+- ✅ Register vehicle entry  
+- ✅ List all parked vehicles  
+- ✅ Remove vehicle and calculate total price  
+- ✅ Validate user inputs and handle errors  
+- ✅ Case-insensitive plate checks  
+- ✅ Price formula: `initialPrice + (pricePerHour * hours)`  
+- ✅ Real-time feedback and confirmation messages  
+- ✅ Clean and modular code with full encapsulation  
 
-✅ Price formula: initialPrice + (pricePerHour * hours)
+---
 
-💡 Business Logic
-csharp
-Copy
-Edit
+## 💡 Business Logic
+
+The total price is calculated as:
+
+```csharp
 decimal totalAmount = initialPrice + (pricePerHour * hours);
-Includes user-friendly prompts, case-insensitive plate checks, and safe input parsing.
+```
 
-🧠 Skills Practiced
-Concept	Applied? ✅
-Object-Oriented Programming (OOP)	✅
-Generic Lists (List<string>)	✅
-Console I/O	✅
-Control Flow (if, switch, foreach)	✅
-Exception & Input Handling	✅
-Encapsulation & Clean Code	✅
+- The system ensures input validity using `TryParse`.
+- Plates are stored and compared in uppercase for consistency.
+- All features are encapsulated in the `Parking` class.
 
-🛠️ Tech Stack
-💻 .NET SDK (C#)
+---
 
-🧱 Object-Oriented Programming
+## 🧠 Skills Practiced
 
-🧪 Visual Studio / VS Code
+| 💡 Concept                           | ✅ Applied |
+|-------------------------------------|-----------|
+| Object-Oriented Programming (OOP)   | ✅ Yes     |
+| Generic Lists (`List<string>`)      | ✅ Yes     |
+| Console Input/Output                | ✅ Yes     |
+| Control Flow (if, switch, foreach)  | ✅ Yes     |
+| Exception Handling & TryParse       | ✅ Yes     |
+| Encapsulation & Clean Architecture  | ✅ Yes     |
 
-🖥️ Console Application (CLI)
+---
 
-🚀 Roadmap & Upgrades
-Feature	Status
-Save data to file	✅ Done
-GUI using WinForms	🛠️ In progress
-Unit testing with xUnit	⏳ Planned
-Apply SOLID principles	⏳ Planned
-Database integration (SQLite/SQL Server)	⏳ Planned
+## 🛠️ Tech Stack
 
-🧭 How to Run
-Clone the repository
+- 💻 **.NET SDK (C#)**  
+- 🧱 Object-Oriented Programming  
+- 🧪 Visual Studio / VS Code  
+- 🖥️ Console Application (CLI)  
 
-bash
-Copy
-Edit
+---
+
+## 🚀 Roadmap & Upgrades
+
+| Feature                                      | Status       |
+|---------------------------------------------|--------------|
+| Save data to file                           | ✅ Done       |
+| GUI using **WinForms**                      | 🛠️ In progress |
+| Unit testing with **xUnit**                 | ⏳ Planned    |
+| Apply **SOLID principles**                  | ⏳ Planned    |
+| Database integration (**SQLite/SQL Server**) | ⏳ Planned    |
+
+---
+
+## 🧭 How to Run
+
+### 📥 Clone the Repository
+
+```bash
 git clone https://github.com/yourusername/parking-system-csharp.git
 cd parking-system-csharp
-Open the project in Visual Studio or VS Code
+```
 
-Run the project
+### 🛠️ Open in IDE
 
-Press F5 or use the terminal:
+- Launch **Visual Studio** or **VS Code**
+- Open the folder or `.sln` file
 
-bash
-Copy
-Edit
+### ▶️ Run the Project
+
+- Press `F5` **or**
+- Use terminal:
+
+```bash
 dotnet run
-📂 Project Structure
-bash
-Copy
-Edit
+```
+
+---
+
+## 📂 Project Structure
+
+```
 /ParkingSystem
 │
 ├── Models/
 │   └── Parking.cs          # Core class with vehicle logic
 ├── Program.cs              # Console interface
 ├── README.md               # Project documentation
-└── .csproj                 # Project config
-🙋‍♂️ Author
-Tiago Neri
-💼 Finance Specialist & 💻 Full Stack Developer
+└── ParkingSystem.csproj    # Project config
+```
+
+---
+
+## 🙋‍♂️ Author
+
+**Tiago Neri**  
+💼 Finance Specialist & 💻 Full Stack Developer  
+
+🔗 [LinkedIn](https://www.linkedin.com/in/tiago-neri-cfa-if-50935814b/)  
+
+
