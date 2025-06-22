@@ -86,10 +86,15 @@ decimal totalAmount = initialPrice + (pricePerHour * hours);
 ## 🚀 Roadmap & Upgrades
 
 | Feature                                     | Status         
+
 | Save data to file                           | 🛠️ In progres  |
+
 | GUI using **WinForms**                      | 🛠️ In progress |
+
 | Unit testing with **xUnit**                 | ⏳ Planned     |
+
 | Apply **SOLID principles**                  | ⏳ Planned     |
+
 | Database integration (**SQLite/SQL Server**)| ⏳ Planned     |
 
 ---
